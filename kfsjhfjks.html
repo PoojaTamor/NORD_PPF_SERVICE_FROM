@@ -1,0 +1,17 @@
+<ul class="dropdown-menu parts-list" aria-labelledby="partialBtn">
+  <li><a class="dropdown-item" href="#" data-value="Bonnet">Bonnet</a></li>
+  <li><a class="dropdown-item other-option" href="#" data-value="Other">Other</a></li>
+</ul>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const partsList = document.querySelector(".parts-list");
+  console.log("✅ Dropdown menu found:", partsList);
+
+  partsList.addEventListener("click", function (e) {
+    const item = e.target.closest(".dropdown-item");
+    if (!item) return;
+    console.log("🟢 Click detected:", item.textContent.trim());
+  });
+});
+</script>

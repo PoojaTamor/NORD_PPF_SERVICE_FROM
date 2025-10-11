@@ -1,0 +1,1065 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+       font-family: "Inter", sans-serif;
+       /* border: 1px solid #ebebeb; */
+}
+
+html{
+     font-family: "Inter", sans-serif;
+}
+
+form{
+    background-color: #1E1E1E;
+}
+.allscreee-box{
+    height: 100vh;
+        display: flex;
+      flex-wrap: nowrap;            /* horizontal alignment only */
+      overflow-x: auto;             /* enable horizontal scroll */
+      scroll-behavior: smooth;      /* smooth scrolling */
+      -webkit-overflow-scrolling: touch;
+      /* scrollbar-width: none;  */
+}
+
+[data-box] {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+.firstallinone,
+.mylastcolumn {
+  transition: transform 0.8s ease;
+}
+
+/* Slide form left */
+.firstallinone.hide {
+  transform: translateX(-100%);
+}
+
+/* Thankyou initially off-screen */
+.mylastcolumn {
+  display: none;
+  transform: translateX(100%);
+}
+
+/* Slide thankyou in */
+.mylastcolumn.show {
+  display: block;
+  transform: translateX(0);
+}
+
+  .allscreee-box::-webkit-scrollbar {
+      /* display: none;                 */
+    }
+.lastnordimg{
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+}
+.thankque{
+height: 100vh ;
+/* background-color: #fff; */
+}
+.logo-box{
+    height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+}
+
+
+.logo-box img {
+  /* display: block; */
+/* width: 100%; */
+  height: 580px;
+}
+
+/* .first-slide-box{
+    width: 100% !important;
+    background-color: #2F2F2F;
+    height: 100%;
+    border-radius: 20px;
+} */
+
+    .button-explore {
+      display: inline-block;
+      background-color: #EB4A14;
+      color: white;
+      padding: 0.9rem 2rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      width: 60%;
+      text-decoration: none;
+      overflow: hidden;
+      text-transform: uppercase;
+      margin-top: 10px;
+      transition: all 0.5s;
+    }
+
+    .button-inner {
+      position: relative;
+      height: 20px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .button-inner-text,
+    .button-inner-text-hover {
+      position: absolute;
+      left: 0;
+      right: 0;
+      text-align: center;
+      transition: transform 0.3s ease;
+      will-change: transform;
+      backface-visibility: hidden;
+      font-weight: 500;
+      
+    }
+
+    .button-inner-text {
+      transform: translateY(0%);
+    }
+
+    .button-inner-text-hover {
+      transform: translateY(100%);
+      
+    }
+
+    .button-explore:hover .button-inner-text {
+      transform: translateY(-100%);
+    }
+
+    .button-explore:hover .button-inner-text-hover {
+      transform: translateY(0%);
+    }
+    .button-explore:hover{
+      background-color:#EB4A14 ;
+    }
+
+    .first-slide-box{
+        padding: 50px ;
+        display: flex;
+        align-items: end;
+    }
+
+      .first-slide-box h1{
+        font-size:8rem;
+        line-height: 1;
+font-weight: 600;
+letter-spacing: -0.02em;
+color: #FFFFFF;
+padding-top: 40px;
+
+      }
+
+        .first-slide-box p{
+font-size: 1.4rem;
+font-weight: 500;
+line-height: 1;
+color: #FFFFFF;
+margin-block: 30px;
+        }
+
+        .first-bottom span{
+color: #696969;
+padding-bottom: 5px;
+display: inline-block
+        }
+          .first-bottom h5{
+font-size: 1.4rem;
+font-weight: 500;
+line-height: 1;
+/* or 133% */
+padding-top: 20px;
+color: #fff;
+
+
+          }
+
+/* 
+.allcard {
+  display: flex;
+  overflow-x: auto;          
+  scroll-behavior: smooth;   
+  gap: 50px;                 
+  
+  -webkit-overflow-scrolling: touch;
+} */
+
+.locked {
+  pointer-events: none;   /* click / tap disabled */
+  opacity: 0.5;           /* thoda greyed-out look */
+}
+
+
+.allcard {
+  scroll-behavior: smooth;
+  display: flex;
+  height: 100vh;
+  /* overflow-x: auto; */
+  overflow-x: hidden;
+  gap: 50px;
+  align-items: center;
+  transition: scroll-left 0.6s ease;
+}
+
+.allcard::-webkit-scrollbar {
+  display: none;         
+}
+
+.first-outer-box {
+  flex: 0 0 100%;           /* 100% width, does not shrink */
+  scroll-snap-align: start; /* snap at the start */
+}
+
+.Personal_Details_box,
+.Vehicle_Details_box,
+.Our_Services_box ,
+.Our_Installer_box{
+  flex: 0 0 35%;  
+  min-width: 35%;           /* 40% width for other boxes */
+  scroll-snap-align: start;  /* snap at start */
+  padding: 40px;
+  border-radius: 10px;
+  height: 80vh;
+}
+
+
+.first-slide-box {
+  width: 96%;
+  background-color: #2F2F2F;
+  border-radius: 20px;
+  margin-right: 100px;
+}
+
+.Personal_Details_box{
+background-color: #EB4A14;
+}
+.Vehicle_Details_box{
+background-color: #494949;
+}
+
+
+.Our_Services_box {
+    background-color: #2E2E2E;
+    padding: 40px 40px 10px 40px !important;
+}
+.Our_Installer_box{
+background-color: #252424;
+  
+}
+.Our_Services_box h2{
+  padding-bottom: 60px !important;
+}
+
+.full-detais-box{
+    width: 100%;
+}
+.box {
+  padding: 50px;
+  color: white;
+  /* overflow: hidden; */
+  cursor: pointer;
+  transition: all 0.5s ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+}
+
+/* Heading big by default */
+.box h2 {
+  font-size: 4.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #fff;
+  line-height: 1;
+  transition: all 0.8s ease;
+  margin: 0;
+  padding-bottom: 0px;
+
+}
+
+
+/* Details hidden initially */
+
+
+.detailsbox input {
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  padding-inline: 10px;
+  /* border: 1px solid transparent; */
+
+  /* margin-bottom: 15px; */
+}
+
+.detailsbox input:focus{
+    border: 1px solid #fff;
+}
+/* When box active */
+.box.active h2 {
+font-size: 4rem;
+    line-height: 1;
+  margin-bottom: 20px;
+    padding-bottom: 0px;
+}
+
+.box.active .detailsbox {
+  height: 300px; /* enough for inputs */
+  opacity: 1;
+  /* border: 1px solid #000; */
+}
+   .All_sub_box{
+     display: flex;
+    gap: 50px; 
+    /* width: max-content; remove this */
+    width: 90%; /* or 100% of parent container */
+    justify-content: space-between;  
+    }
+
+.sub_box{
+  /* padding: 50px; */
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end; 
+  padding: 40px;
+  border-radius: 10px;
+ flex: 0 0 35%; 
+ min-width: 35%;
+ height: 80vh;
+  background-color: #2E2E2E;         /* 40% width for other boxes */
+    box-sizing: border-box; /* include padding in width */
+
+}
+
+.sub_box h2{
+  font-size: 4rem;
+    line-height: 1;
+  margin-bottom: 20px;
+    padding-bottom: 0px;  
+}
+
+
+.subdetailbox{
+    display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+    height: 300px;
+  /* opacity: 1; */
+  padding-bottom: 30px;
+}
+
+.dropdown-menu.show{
+  height: 200px;
+  overflow-y: scroll;
+}
+.detailsbox {
+  display: flex ;
+  flex-direction: column;
+  justify-content: end;
+  gap: 10px;
+    height: 0;
+  opacity: 0;
+  padding-bottom: 30px;
+  /* overflow: hidden; */
+  transition: all 0.8s ease;
+}
+
+.vichaldbox{
+  gap: 1px !important;
+
+}
+.input-row {
+  display: flex;
+  align-items: center;
+  gap:2px;
+}
+
+.input-row label {
+  /* fixed width for alignment */
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+   white-space: nowrap
+}
+
+.input-row input {
+  /* padding: 8px 10px; */
+  /* border-radius: 6px; */
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 500;
+  background-color: transparent;
+  font-size: 1.2rem;
+}
+
+.input-row .form-select{
+      border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 500;
+  background-color: transparent;
+  font-size: 1.2rem;
+     background-image:unset;
+
+}
+.form-select:focus {
+    border-color: transparent;
+    outline: none;
+     box-shadow:none;
+}
+.form-select option{
+    color: #2F2F2F;
+    font-size: 1.5rem;
+}
+
+
+    /* Hide default checkbox */
+    .input-row input[type="checkbox"] {
+      display: none;
+    }
+
+    /* Styled label */
+    .checkbox-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: #EB4A14;
+      font-weight: 600;
+      position: relative;
+    }
+
+    /* Arrow hidden by default */
+    .checkbox-label::after {
+  content: "";
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin-left: 6px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      background: url('data:image/svg+xml;utf8,<svg width="47" height="46" viewBox="0 0 47 46" xmlns="http://www.w3.org/2000/svg"><path d="M46.7583 4.27473C46.7583 1.97775 44.8963 0.11568 42.5993 0.115683L5.16783 0.115681C2.87085 0.115681 1.00878 1.97775 1.00878 4.27473C1.00878 6.57171 2.87085 8.43378 5.16783 8.43378H38.4402V41.7062C38.4402 44.0032 40.3023 45.8652 42.5993 45.8652C44.8963 45.8652 46.7583 44.0032 46.7583 41.7062L46.7583 4.27473ZM3.89453 42.9795L6.83542 45.9204L45.5402 7.21563L42.5993 4.27473L39.6584 1.33384L0.953638 40.0386L3.89453 42.9795Z" fill="%23EB4A14"/></svg>') no-repeat center;
+      background-size: contain;
+    }
+
+    /* Checked state */
+    .input-row input[type="checkbox"]:checked + .checkbox-label {
+      border: 1px solid #fff;
+      color: #fff;
+    }
+
+    .input-row input[type="checkbox"]:checked + .checkbox-label::after {
+      opacity: 1;
+    }
+
+    /* Hover effect */
+    .checkbox-label:hover::after {
+      opacity: 1;
+    }
+    .heading span{
+        color: #EB4A14;
+    }
+
+     /* Hide default radio */
+    .radio-row input[type="radio"] {
+      display: none;
+    }
+
+    /* Styled label */
+    .radio-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3px 20px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      color: #fff;
+      /* margin-right: 15px; */
+      font-size: 1rem;
+
+      position: relative;
+    }
+
+
+   .custom-input {
+          background-color: transparent;
+    color: #fff;
+    font-size: 1rem;
+    width: 100%;
+    border: none;
+    font-weight: 600;
+    margin-top: 3px;
+    outline: none;
+    padding: 4px 10px;
+    /* border-radius: 50px; */
+    /* border: 1px solid #faf4f4 !important; */
+    }
+
+    /* Arrow hidden by default */
+    .radio-label::after {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin-left: 6px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      background: url('data:image/svg+xml;utf8,<svg width="47" height="46" xmlns="http://www.w3.org/2000/svg"><path d="M46.7583 4.27473C46.7583 1.97775 44.8963 0.11568 42.5993 0.115683L5.16783 0.115681C2.87085 0.115681 1.00878 1.97775 1.00878 4.27473C1.00878 6.57171 2.87085 8.43378 5.16783 8.43378H38.4402V41.7062C38.4402 44.0032 40.3023 45.8652 42.5993 45.8652C44.8963 45.8652 46.7583 44.0032 46.7583 41.7062L46.7583 4.27473ZM3.89453 42.9795L6.83542 45.9204L45.5402 7.21563L42.5993 4.27473L39.6584 1.33384L0.953638 40.0386L3.89453 42.9795Z" fill="%23EB4A14"/></svg>') no-repeat center;
+      background-size: contain;
+    }
+
+    /* Selected radio */
+    .radio-row input[type="radio"]:checked + .radio-label {
+      border: 1px solid #fff;
+      color: #fff;
+    }
+
+       .radio-label:hover::after {
+      opacity: 1;
+    }
+    .radio-row input[type="radio"]:checked + .radio-label::after {
+      opacity: 1;
+    }
+
+ 
+
+    .checkboxservice input{
+      display: none;
+    }
+
+    .radio-labels{
+      padding: 3px 15px;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+      color: #fff;
+      border: 2px solid transparent;
+      transition: all 0.2s;
+      font-size: 1rem;
+
+    }
+
+    input[type="radio"]:checked + .radio-labels {
+      border: 2px solid #fff;
+    }
+
+    .btn-check:focus+.btn, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+  .checkboxservice .btn:hover {
+    color: #fff;
+}
+
+ .checkboxservice span{
+  display: inline-block;
+  /* border: 1px solid #ffff; */
+  /* color: #EB4A14; */
+  border-radius: 50px;
+  /* color: #1E1E1E; */
+  border: 1px solid #EB4A14;
+  /* background-color: #fff; */
+margin: 5px 4px;
+  font-weight: 400;
+  font-size: 0.6rem;
+
+ }
+
+
+.yearbox select {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 16px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  appearance: none; /* hides default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  cursor: pointer;
+
+  /* Custom arrow */
+  background-image: url('data:image/svg+xml;utf8,<svg width="33" height="29" viewBox="0 0 33 29" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.5883 28.7168L0.535075 0.911763L32.6416 0.911766L16.5883 28.7168Z" fill="%23D9D9D9"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 13px 13px; /* adjust size as needed */
+  padding-right: 40px; /* space for arrow */
+}
+
+.yearbox select:focus{
+  outline: none;
+}
+.yearbox option{
+  color: #1E1E1E;
+}
+/* .yearbox {
+  position: relative;
+  display: inline-block;
+}
+
+.yearbox::after {
+  content: "▼";
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #fff;
+} */
+.Uplode_box{
+  flex: 0 0 80%;  
+  /* border: 1px solid #ffffff;  */
+    padding: 40px;
+}
+
+.Uplode_box h2{
+    font-size: 4.5rem;
+    line-height: 1;
+  margin-bottom: 20px;
+    padding-bottom: 0px; 
+    color: #fff;
+    font-weight: 600;
+    margin-left: 50px;
+    padding-bottom: 50px;
+}
+.ubloade_pic {
+  width: 100%;
+  height: 260px;
+  border-radius: 12px;
+  background-color: #2E2E2E;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  transition: 0.3s ease-in-out;
+}
+
+/* Upload button */
+.upload-btn {
+  border: 1px solid #ccc;
+  padding: 8px 50px;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  background: transparent;
+  z-index: 2; /* overlay ke upar rahe */
+}
+
+.plus {
+  margin-top: 10px;
+    z-index: 2;
+}
+
+.overlaer {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0); /* default transparent */
+  z-index: 1;
+  transition: background 0.4s ease; 
+}
+
+.overlaer.active {
+background: rgb(0 0 0 / 70%)
+}
+
+.final-box{
+    flex: 0 0 100%;  
+    padding: 40px;
+}
+.final-box h2{
+    font-size: 4.5rem;
+    line-height: 1;
+    font-weight: 600;
+  margin-bottom: 20px;
+    padding-bottom: 0px; 
+    color: #fff;
+    margin-left: 50px;
+    padding-bottom: 50px;
+}
+maid{
+  color: #626262;
+}
+
+
+.finaldetailsbox{
+    margin-left: 50px;
+}
+
+.finaldetailsbox input{
+  width: 50%;
+  font-size: 2rem;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+}
+.agree-box{
+  margin-top: 30px;
+
+}
+.agree-box input[type="checkbox"]{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 35px;
+  height: 35px;
+  border: 2px solid #EB4A14;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.agree-box input[type="checkbox"]:checked {
+  background-color: #EB4A14; 
+  border-color: #EB4A14;
+}
+.agree-box input[type="checkbox"]:checked::after {
+ content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 30px;
+  height: 30px;
+  background: url("data:image/svg+xml;utf8,<svg fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M6.173 13.727L.46 7.5 1.88 6.04l4.293 4.647L14.12.56 15.54 2.02z'/></svg>") no-repeat center center;
+  background-size: contain;
+}
+.agree-box  label{
+  font-size: 1.3rem;
+  color: #fff;
+  display: block;
+  line-height: 1;
+  margin-top: 20px;
+}
+
+.finaldetailsbox .button-explore{
+width: 25%;
+background-color: transparent;
+border: 1px solid #ffffff;
+margin-top: 30px;
+}
+.finaldetailsbox .button-explore:hover{
+  background-color: #EB4A14;
+  border: 1px solid #EB4A14;
+}
+
+.sub_box {
+  display: none; /* default hidden */
+}
+.sub_box.active {
+  display: block; /* selected service show */
+}
+.input-row input::placeholder{
+  color: #fff;
+}
+
+
+@media (max-width: 991.98px) {
+  .logo-box{
+    height: unset !important;
+  }
+  .logo-box img{
+    height: unset !important;
+         margin-top: 60px;
+  }
+  .first-slide-box {
+    width: 100%;
+}
+ .box.active h2 {
+    font-size: 5rem;
+    margin-bottom: 50px;
+    padding-bottom: 0px;
+}
+
+.box.active .detailsbox {
+    height: 350px;
+}
+.input-row input {
+    font-size: 2rem;
+}
+.input-row label {
+    font-size: 1.5rem;
+}
+.radio-label {
+    padding: 3px 20px;
+    font-size: 1.5rem;
+
+}
+
+.input-row .form-select {
+  font-size: 2rem;
+}
+.sub_box {
+    flex: 0 0 77%;
+
+}
+
+.box h2 {
+      font-size: 6rem;
+}
+.Personal_Details_box, .Vehicle_Details_box, .Our_Services_box ,.Our_Installer_box {
+    flex: 0 0 77%;
+    padding: 40px;
+}
+
+.allcard{
+  height: unset;
+}
+.final-box h2 {
+    font-size: 4rem;
+    line-height: 65px;
+}
+.finaldetailsbox .button-explore {
+    width: 50%;
+    margin-top: 100px;
+}
+.finaldetailsbox input {
+    width: 70%;
+}
+.Uplode_box {
+    flex: 0 0 100%;
+  
+    padding: 40px;
+}
+.Uplode_box h2 {
+    font-size: 6rem;
+    line-height: 78px;
+}
+.ubloade_pic {
+    width: 100%;
+    height: 380px;
+}
+.upload-btn {
+    border: 1px solid #ccc;
+    padding: 15px 80px;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.agree-box {
+    margin-top: 40px;
+}
+.agree-box  label {
+    margin-top: 40px;
+}
+.first-slide-box h1 {
+  font-size: 5rem;
+  padding-top: 100px;
+} 
+.first-slide-box p{
+  font-size: 1.4rem;
+  padding-block: 20px;
+}
+.first-bottom h5 {
+    font-size: 1.9rem;
+    padding-top: 20px;
+  padding-inline: 20px;
+}
+
+}
+
+
+
+@media (max-width:500px) {
+.first-slide-box {
+    padding: 30px;
+}
+ 
+.first-slide-box h1 {
+    font-size: 3.5rem;
+    padding-top: 10px;
+}
+.first-slide-box p {
+    font-size: 0.9rem;
+    padding-block: 0px;
+}
+.button-explore {
+    padding: 0.6rem 2rem;
+    font-size: 0.8rem;
+    width: 70%;
+}
+.first-slide-box {
+    width: 100%;
+    margin-right: 0px;
+}
+.first-bottom h5 {
+    font-size: 1rem;
+}
+.box.active h2 {
+    font-size: 2rem;
+    line-height: 90px;
+    margin-bottom: 50px;
+    padding-bottom: 0px;
+}
+.Personal_Details_box, .Vehicle_Details_box, .Our_Services_box , .Our_Installer_box {
+    flex: 0 0 100%;
+    padding: 25px;
+}
+.logo-box img{
+  margin-top: 10px;
+}
+.box h2 {
+    font-size: 4rem;
+    line-height: 60px;
+    padding-bottom: 0px;
+}
+.box.active h2 {
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 55px;
+}
+.Our_Services_box {
+    padding: 25px !important;
+}
+.lastnordimg {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+}
+.box.active .detailsbox {
+    height: 200px;
+}
+.input-row .form-select {
+
+    font-size: 1rem;
+    padding: 0px;
+}
+    .input-row label {
+        font-size: 1rem;
+    }
+    .input-row input {
+    font-size: 1rem;
+}
+.sub_box h2 {
+    font-size: 3rem;
+    line-height: 44px;
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+}
+.yearbox select {
+    background-color: transparent;
+    padding: 10px 16px;
+    font-size: 1rem;
+    width: 100%;
+}
+.radio-labels {
+    padding: 3px 22px;
+    border: 1px solid transparent;
+    font-size: 1rem;
+}
+input[type="radio"]:checked + .radio-labels {
+    border: 1px solid #fff;
+}
+.sub_box {
+    flex: 0 0 100%;
+}
+.custom-input {
+    font-size: 1rem;
+    padding: 4px 10px;
+    /* border-radius: 50px; */
+    /* border: 1px solid #faf4f4 !important; */
+}
+.first-bottom{
+  margin-left: 20px;
+}
+.radio-label {
+    padding: 3px 22px;
+    font-size: 1rem;
+}
+.sub_box {
+  padding: 25px;
+}
+.Uplode_box h2 {
+    font-size: 2.8rem;
+    line-height: 37px;
+    color: #fff;
+    margin-left: 0px;
+    padding-bottom: 50px;
+}
+.upload-btn {
+    border: 1px solid #ccc;
+    padding: 7px 30px;
+    font-size: 1rem;
+    margin-bottom: 0px;
+}
+    .Uplode_box {
+        padding: 20px;
+    }
+    .ubloade_pic {
+    width: 100%;
+    height: 250px;
+}
+.Uplode_box svg{
+width: 30px;
+}
+    .final-box h2 {
+        font-size: 1.8rem;
+        line-height: 30px;
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
+    .finaldetailsbox {
+    margin-left: 0px;
+}
+.finaldetailsbox input {
+    width: 100%;
+}
+.agree-box input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+
+}
+.agree-box input[type="checkbox"]:checked::after {
+
+    width: 22px;
+    height: 22px;
+}
+.agree-box label {
+    font-size:0.8rem;
+    color: #fff;
+    display: block;
+    line-height: 1;
+    margin-top: 20px;
+}
+    .finaldetailsbox .button-explore {
+        width: 80%;
+        margin-top: 60px;
+    }
+
+    .midimghhh{
+      width:90% !important;
+      /* margin-block: 100px !important; */
+    }
+
+}
