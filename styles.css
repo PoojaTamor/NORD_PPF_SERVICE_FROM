@@ -982,8 +982,8 @@ width: 100%;
 }
 .yearbox select {
     background-color: transparent;
-    padding: 10px 16px;
-    font-size: 1rem;
+    padding: 6px 16px;
+    font-size: 0.9rem;
     width: 100%;
 }
 .radio-labels {
@@ -1007,8 +1007,8 @@ input[type="radio"]:checked + .radio-labels {
   margin-left: 20px;
 }
 .radio-label {
-    padding: 3px 22px;
-    font-size: 1rem;
+    padding: 3px 4px;
+    font-size: 0.9rem;
 }
 .sub_box {
   padding: 25px;
