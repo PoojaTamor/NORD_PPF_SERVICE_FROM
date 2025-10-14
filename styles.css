@@ -679,6 +679,10 @@ margin: 5px 4px;
     z-index: 2;
 }
 
+.heading h2{
+  font-size: 5rem !important;
+  line-height: 1;
+}
 .overlaer {
   position: absolute;
   inset: 0;
@@ -785,6 +789,20 @@ margin-top: 30px;
 }
 
 
+.box{
+  position: relative;
+}
+.nextbtn{
+  position: absolute;
+  top:3%;
+  width: 20%;
+  height: 50px;
+  /* border: 1px solid #000; */
+  right: 5%;
+}
+.nextbtn img{
+width: 100%;
+}
 @media (max-width: 991.98px) {
   .logo-box{
     height: unset !important;
@@ -1060,6 +1078,9 @@ width: 30px;
     .midimghhh{
       width:90% !important;
       /* margin-block: 100px !important; */
+    }
+    .heading h2{
+font-size: 2.5rem !important;
     }
 
 }
