@@ -804,45 +804,55 @@ width: 100%;
   .logo-box{
     height: unset !important;
   }
-  .logo-box img{
-    height: unset !important;
-         margin-top: 60px;
+
+
+.logo-box img{
+height: unset !important;
+margin-top: 60px;
   }
-  .first-slide-box {
-    width: 100%;
+
+
+.first-slide-box {
+width: 100%;
 }
- .box.active h2 {
-    font-size: 5rem;
-    margin-bottom: 50px;
-    padding-bottom: 0px;
+
+.box.active h2 {
+font-size: 5rem;
+margin-bottom: 50px;
+padding-bottom: 0px;
 }
 
 .box.active .detailsbox {
-    height: 350px;
+height: 350px;
 }
+
 .input-row input {
-    font-size: 2rem;
+font-size: 2rem;
 }
+
 .input-row label {
     font-size: 1.5rem;
 }
+
 .radio-label {
     padding: 3px 20px;
     font-size: 1.5rem;
-
 }
 
 .input-row .form-select {
-  font-size: 2rem;
+font-size: 2rem;
 }
-.sub_box {
-    flex: 0 0 77%;
 
+
+.sub_box {
+flex: 0 0 77%;
 }
 
 .box h2 {
-      font-size: 6rem;
+font-size: 6rem;
 }
+
+
 .Personal_Details_box, .Vehicle_Details_box, .Our_Services_box ,.Our_Installer_box {
     flex: 0 0 77%;
     padding: 40px;
@@ -900,184 +910,216 @@ width: 100%;
     padding-top: 20px;
   padding-inline: 20px;
 }
-
 }
 
 
 
 @media (max-width:500px) {
-.first-slide-box {
-    padding: 30px;
-}
- 
-.first-slide-box h1 {
-    font-size: 3.5rem;
-    padding-top: 10px;
-}
-.first-slide-box p {
-    font-size: 0.9rem;
-    padding-block: 0px;
-}
-.button-explore {
-    padding: 0.6rem 2rem;
-    font-size: 0.8rem;
-    width: 70%;
-}
-.first-slide-box {
-    width: 100%;
-    margin-right: 0px;
-}
-.first-bottom h5 {
-    font-size: 1rem;
-}
-.box.active h2 {
-    font-size: 2rem;
-    line-height: 90px;
-    margin-bottom: 50px;
-    padding-bottom: 0px;
-}
-.Personal_Details_box, .Vehicle_Details_box, .Our_Services_box , .Our_Installer_box {
-    flex: 0 0 100%;
-    padding: 25px;
-}
-.logo-box img{
-  margin-top: 10px;
-}
-.box h2 {
-    font-size: 4rem;
-    padding-bottom: 0px;
-}
-.box.active h2 {
-    font-size: 3.5rem;
-    line-height: 1;
-    margin-bottom: 55px;
-}
-.Our_Services_box {
-    padding: 25px !important;
-}
-.lastnordimg {
-    height: 100px;
-    width: 100%;
-    object-fit: cover;
-}
-.box.active .detailsbox {
-    height: 200px;
-}
-.input-row .form-select {
 
-    font-size: 1rem;
-    padding: 0px;
+.first-slide-box {
+padding: 30px;
 }
-    .input-row label {
-        font-size: 1rem;
-    }
-    .input-row input {
-    font-size: 1rem;
+
+.first-slide-box h1 {
+font-size: 3.5rem;
+padding-top: 10px;
 }
+
+.first-slide-box p {
+font-size: 0.9rem;
+padding-block: 0px;
+}
+
+.button-explore {
+padding: 0.6rem 2rem;
+font-size: 0.8rem;
+width: 70%;
+}
+
+.first-slide-box {
+width: 100%;
+margin-right: 0px;
+}
+
+.first-bottom h5 {
+font-size: 1rem;
+}
+
+.box.active h2 {
+font-size: 2rem;
+line-height: 90px;
+margin-bottom: 50px;
+padding-bottom: 0px;
+}
+
+.Personal_Details_box, .Vehicle_Details_box, .Our_Services_box , .Our_Installer_box {
+flex: 0 0 100%;
+padding: 25px;
+}
+
+.logo-box img{
+margin-top: 10px;
+}
+
+.box h2 {
+font-size: 4rem;
+padding-bottom: 0px;
+}
+
+.box.active h2 {
+font-size: 3.5rem;
+line-height: 1;
+margin-bottom: 55px;
+}
+
+.Our_Services_box {
+padding: 25px !important;
+}
+
+.lastnordimg {
+height: 100px;
+width: 100%;
+object-fit: cover;
+}
+
+.box.active .detailsbox {
+height: 200px;
+}
+
+.input-row .form-select {
+font-size: 1rem;
+padding: 0px;
+}
+
+.input-row label {
+font-size: 1rem;
+}
+
+.input-row input {
+font-size: 1rem;
+}
+
 .sub_box h2 {
-    font-size: 3rem;
-    line-height: 44px;
-    margin-bottom: 20px;
-    padding-bottom: 0px;
+font-size: 3rem;
+line-height: 44px;
+margin-bottom: 20px;
+padding-bottom: 0px;
 }
+
 .yearbox select {
-    background-color: transparent;
-    padding: 6px 16px;
-    font-size: 0.9rem;
-    width: 100%;
+background-color: transparent;
+padding: 6px 16px;
+font-size: 0.9rem;
+width: 100%;
 }
+
 .radio-labels {
-    padding: 3px 22px;
-    border: 1px solid transparent;
-    font-size: 1rem;
+padding: 3px 22px;
+border: 1px solid transparent;
+font-size: 1rem;
 }
+
 input[type="radio"]:checked + .radio-labels {
-    border: 1px solid #fff;
+border: 1px solid #fff;
 }
+
 .sub_box {
-    flex: 0 0 100%;
+flex: 0 0 100%;
 }
+
 .custom-input {
-    font-size: 1rem;
-    padding: 4px 10px;
+font-size: 1rem;
+padding: 4px 10px;
     /* border-radius: 50px; */
     /* border: 1px solid #faf4f4 !important; */
 }
+
 .first-bottom{
-  margin-left: 20px;
+margin-left: 20px;
 }
+
 .radio-label {
-    padding: 3px 4px;
-    font-size: 0.9rem;
+padding: 2px 22px;
+font-size: 0.9rem;
 }
+
 .sub_box {
-  padding: 25px;
+padding: 25px;
 }
+
 .Uplode_box h2 {
-    font-size: 2.8rem !important;
-    line-height: 1;
-    color: #fff;
-    margin-left: 0px;
-    padding-bottom: 50px;
+font-size: 2.8rem !important;
+line-height: 1;
+color: #fff;
+margin-left: 0px;
+padding-bottom: 50px;
 }
+
 .Uplode_box .nextbtn{
   width: 10%;
 }
+
 .upload-btn {
-    border: 1px solid #ccc;
-    padding: 7px 30px;
-    font-size: 1rem;
-    margin-bottom: 0px;
+border: 1px solid #ccc;
+padding: 7px 30px;
+font-size: 1rem;
+margin-bottom: 0px;
 }
-    .Uplode_box {
-        padding: 20px;
-    }
-    .ubloade_pic {
-    width: 100%;
-    height: 250px;
+   
+.Uplode_box {
+padding: 20px;
 }
+
+.ubloade_pic {
+width: 100%;
+height: 250px;
+}
+
 .Uplode_box svg{
 width: 30px;
 }
-    .final-box h2 {
-        font-size: 1.8rem;
-        line-height: 30px;
-        margin-left: 0px;
-        margin-bottom: 10px;
-    }
-    .finaldetailsbox {
-    margin-left: 0px;
+
+.final-box h2 {
+font-size: 1.8rem;
+line-height: 30px;
+margin-left: 0px;
+margin-bottom: 10px;
 }
+
+.finaldetailsbox {
+margin-left: 0px;
+}
+
 .finaldetailsbox input {
-    width: 100%;
+width: 100%;
 }
+
 .agree-box input[type="checkbox"] {
-    width: 30px;
-    height: 30px;
-    border-radius: 4px;
-
+width: 30px;
+height: 30px;
+border-radius: 4px;
 }
+
 .agree-box input[type="checkbox"]:checked::after {
-
-    width: 22px;
-    height: 22px;
+width: 22px;
+height: 22px;
 }
+
 .agree-box label {
-    font-size:0.8rem;
-    color: #fff;
-    display: block;
-    line-height: 1;
-    margin-top: 20px;
+font-size:0.8rem;
+color: #fff;
+display: block;
+line-height: 1;
+margin-top: 20px;
 }
-    .finaldetailsbox .button-explore {
-        width: 80%;
-        margin-top: 60px;
-    }
 
-    .midimghhh{
-      width:90% !important;
-      /* margin-block: 100px !important; */
-    }
+.finaldetailsbox .button-explore {
+width: 80%;
+margin-top: 60px;
+}
 
-
+.midimghhh{
+width:90% !important;
+/* margin-block: 100px !important; */
+}
 }
