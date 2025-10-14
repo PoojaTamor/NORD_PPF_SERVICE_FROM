@@ -309,7 +309,7 @@ background-color: #252424;
 .box.active h2 {
 font-size: 4rem;
     line-height: 1;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
     padding-bottom: 0px;
 }
 
