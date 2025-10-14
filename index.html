@@ -54,6 +54,9 @@
         </div>
 
 <div class="Personal_Details_box box " data-box="personal">
+  <div class="nextbtn">
+    <img src="./nexterrow.png" alt="">
+  </div>
 <div class="full-detais-box">
       <div class="heading">
     <h2>Personal <br>Details</h2>
@@ -80,6 +83,9 @@
 
 
      <div class="Vehicle_Details_box box" data-box="vehicle">
+       <div class="nextbtn">
+    <img src="./nexterrow.png" alt="">
+  </div>
     <div class="full-detais-box">
       <div class="heading">
 
@@ -156,6 +162,9 @@
     </div>
 
     <div class="Our_Services_box box" data-box="services" >
+       <div class="nextbtn">
+    <img src="./nexterrow.png" alt="">
+  </div>
         <div class="full-detais-box">
       <div class="heading">
 
@@ -213,6 +222,9 @@
 </div>
     </div>
         <div class="Our_Installer_box box" data-box="installer" >
+           <div class="nextbtn">
+    <img src="./nexterrow.png" alt="">
+  </div>
         <div class="full-detais-box">
       <div class="heading">
 
@@ -249,7 +261,10 @@
 </div>
     </div>
 
-    <div class="Uplode_box " data-box="uplode">
+    <div class="Uplode_box box " data-box="uplode">
+         <div class="nextbtn">
+    <img src="./nexterrow.png" alt="">
+  </div>
         <div class="full-detais-box">
       <div class="heading">
 
@@ -482,36 +497,38 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ✅ General step unlocking logic
-  steps.forEach((step, index) => {
-    if (index < steps.length - 1) {
-      const requiredFields = step.querySelectorAll("input[required], select[required], textarea[required]");
-      const nextStep = steps[index + 1];
+ // ✅ Step unlocking only on Next Button Click
+steps.forEach((step, index) => {
+  const nextBtn = step.querySelector(".nextbtn");
+  const nextStep = steps[index + 1];
 
-      function checkAndUnlock() {
-        if (allFilled(step)) {
-          unlockStep(nextStep);
-          nextStep.scrollIntoView({ behavior: "smooth", inline: isMobile ? "center" : "start" });
-        }
+  if (nextBtn && nextStep) {
+    nextBtn.addEventListener("click", () => {
+      if (allFilled(step)) {
+        unlockStep(nextStep);
+        nextStep.scrollIntoView({ behavior: "smooth", inline: isMobile ? "center" : "start" });
+      } else {
+        Swal.fire("Incomplete Step", "Please fill all required fields before proceeding.", "warning");
       }
+    });
+  }
+});
 
-      requiredFields.forEach(field => {
-        field.addEventListener("input", checkAndUnlock);
-        field.addEventListener("change", checkAndUnlock);
-      });
-    }
-  });
 
   // ✅ Special handling for Service Step (unlock Installer only when all filled)
-  const serviceStep = document.querySelector('[data-box="services"]');
-  const installerStep = document.querySelector('[data-box="installer"]');
+// ✅ Service Step unlocking now only via Next Button click
+const serviceStep = document.querySelector('[data-box="services"]');
+const installerStep = document.querySelector('[data-box="installer"]');
 
-  if (serviceStep && installerStep) {
-    const warrantySelect = serviceStep.querySelector('select[required]');
-    const finishRadios = serviceStep.querySelectorAll('input[name="finish"]');
-    const coverageRadios = serviceStep.querySelectorAll('input[name="cavarage"]');
-    const partialPartsInput = document.getElementById("partial-parts");
+if (serviceStep && installerStep) {
+  const nextBtn = serviceStep.querySelector(".nextbtn");
+  const warrantySelect = serviceStep.querySelector('select[required]');
+  const finishRadios = serviceStep.querySelectorAll('input[name="finish"]');
+  const coverageRadios = serviceStep.querySelectorAll('input[name="cavarage"]');
+  const partialPartsInput = document.getElementById("partial-parts");
 
-    function checkServiceCompletion() {
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
       const warrantySelected = warrantySelect && warrantySelect.value.trim() !== "" && warrantySelect.value !== "Select Warranty";
       const finishSelected = Array.from(finishRadios).some(r => r.checked);
       const coverageSelected = Array.from(coverageRadios).some(r => r.checked);
@@ -522,26 +539,13 @@ document.addEventListener("DOMContentLoaded", function () {
       if (warrantySelected && finishSelected && coverageSelected && partialFilled) {
         unlockStep(installerStep);
         installerStep.scrollIntoView({ behavior: "smooth", inline: isMobile ? "center" : "start" });
+      } else {
+        Swal.fire("Incomplete Step", "Please complete all service details before proceeding.", "warning");
       }
-    }
-
-    if (warrantySelect) warrantySelect.addEventListener("change", checkServiceCompletion);
-    finishRadios.forEach(r => r.addEventListener("change", checkServiceCompletion));
-    coverageRadios.forEach(r => r.addEventListener("change", checkServiceCompletion));
-    if (partialPartsInput) partialPartsInput.addEventListener("input", checkServiceCompletion);
+    });
   }
-  const uploadStep = document.querySelector('[data-box="uplode"]');
-const finalStep = document.querySelector('[data-box="submit-box"]');
-const fileInput = document.getElementById("fileInput");
-
-if (uploadStep && finalStep && fileInput) {
-  fileInput.addEventListener("change", () => {
-    if (fileInput.files.length > 0) {
-      unlockStep(finalStep);
-      finalStep.scrollIntoView({ behavior: "smooth", inline: isMobile ? "center" : "start" });
-    }
-  });
 }
+
 
 
   // ✅ Form Submit
