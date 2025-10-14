@@ -679,10 +679,7 @@ margin: 5px 4px;
     z-index: 2;
 }
 
-.heading h2{
-  font-size: 5rem !important;
-  line-height: 1;
-}
+
 .overlaer {
   position: absolute;
   inset: 0;
@@ -948,7 +945,6 @@ width: 100%;
 }
 .box h2 {
     font-size: 4rem;
-    line-height: 60px;
     padding-bottom: 0px;
 }
 .box.active h2 {
@@ -1018,11 +1014,14 @@ input[type="radio"]:checked + .radio-labels {
   padding: 25px;
 }
 .Uplode_box h2 {
-    font-size: 2.8rem;
-    line-height: 37px;
+    font-size: 2.8rem !important;
+    line-height: 1;
     color: #fff;
     margin-left: 0px;
     padding-bottom: 50px;
+}
+.Uplode_box .nextbtn{
+  width: 10%;
 }
 .upload-btn {
     border: 1px solid #ccc;
@@ -1079,8 +1078,6 @@ width: 30px;
       width:90% !important;
       /* margin-block: 100px !important; */
     }
-    .heading h2{
-font-size: 2.5rem !important;
-    }
+
 
 }
