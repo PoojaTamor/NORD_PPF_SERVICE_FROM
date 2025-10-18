@@ -636,14 +636,14 @@ margin: 5px 4px;
 }
 
 .Uplode_box h2{
-    font-size: 4.5rem;
+    font-size: 4.5rem !important;
     line-height: 1;
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
     padding-bottom: 0px; 
     color: #fff;
     font-weight: 600;
     margin-left: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 50px !important;
 }
 .ubloade_pic {
   width: 100%;
@@ -676,7 +676,7 @@ margin: 5px 4px;
 
 .plus {
   margin-top: 10px;
-    z-index: 2;
+  z-index: 2;
 }
 
 
@@ -724,10 +724,13 @@ maid{
   border: none;
   border-bottom: 2px solid #fff;
 }
+
+
 .agree-box{
   margin-top: 30px;
-
 }
+
+
 .agree-box input[type="checkbox"]{
   appearance: none;
   -webkit-appearance: none;
@@ -743,10 +746,12 @@ maid{
   margin-right: 8px;
 }
 .agree-box input[type="checkbox"]:checked {
+
   background-color: #EB4A14; 
   border-color: #EB4A14;
 }
 .agree-box input[type="checkbox"]:checked::after {
+
  content: "";
   position: absolute;
   top: 3px;
@@ -756,6 +761,8 @@ maid{
   background: url("data:image/svg+xml;utf8,<svg fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M6.173 13.727L.46 7.5 1.88 6.04l4.293 4.647L14.12.56 15.54 2.02z'/></svg>") no-repeat center center;
   background-size: contain;
 }
+
+
 .agree-box  label{
   font-size: 1.3rem;
   color: #fff;
@@ -765,12 +772,15 @@ maid{
 }
 
 
+
+
 .finaldetailsbox .button-explore{
 width: 25%;
 background-color: transparent;
 border: 1px solid #ffffff;
 margin-top: 30px;
 }
+
 .finaldetailsbox .button-explore:hover{
   background-color: #EB4A14;
   border: 1px solid #EB4A14;
@@ -779,17 +789,19 @@ margin-top: 30px;
 .sub_box {
   display: none; /* default hidden */
 }
+
 .sub_box.active {
   display: block; /* selected service show */
 }
+
 .input-row input::placeholder{
   color: #fff;
 }
 
-
 .box{
   position: relative;
 }
+
 .nextbtn{
   position: absolute;
   top:3%;
@@ -798,14 +810,17 @@ margin-top: 30px;
   /* border: 1px solid #000; */
   right: 5%;
 }
+
 .nextbtn img{
 width: 100%;
 }
+
 
 div:where(.swal2-icon).swal2-warning {
     border-color: #EB4A14 !important;
     color: #EB4A14 !important;
 }
+
 div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
     border-radius: var(--swal2-confirm-button-border-radius);
     background: initial;
@@ -813,13 +828,18 @@ div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
     padding: 10px 40px !important;
     font-size: 1rem !important;
 }
+
 div:where(.swal2-icon).swal2-error {
     border-color: #EB4A14 !important;
     color: #EB4A14 !important;
 }
+
+
 div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line] {
     background-color: #EB4A14 !important;
 }
+
+
 @media (max-width: 991.98px) {
   .logo-box{
     height: unset !important;
@@ -851,19 +871,25 @@ font-size: 2rem;
 }
 
 .input-row label {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .radio-label {
     padding: 3px 20px;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
+.yearbox select {
+    padding: 11px 16px;
+    border-radius: 30px;
+    font-size: 2rem;
 
+}
 .input-row .form-select {
 font-size: 2rem;
 }
-
-
+ h5 {
+    font-size: 2rem;
+}
 .sub_box {
 flex: 0 0 77%;
 }
@@ -896,6 +922,8 @@ font-size: 6rem;
     flex: 0 0 100%;
   
     padding: 40px;
+
+
 }
 .Uplode_box h2 {
     font-size: 6rem;
@@ -931,7 +959,6 @@ font-size: 6rem;
   padding-inline: 20px;
 }
 }
-
 
 
 @media (max-width:500px) {
@@ -1143,3 +1170,4 @@ width:90% !important;
 /* margin-block: 100px !important; */
 }
 }
+
