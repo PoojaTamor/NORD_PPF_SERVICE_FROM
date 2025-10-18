@@ -838,7 +838,16 @@ div:where(.swal2-icon).swal2-error {
 div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line] {
     background-color: #EB4A14 !important;
 }
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
 
 @media (max-width: 991.98px) {
   .logo-box{
@@ -850,7 +859,9 @@ div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line] {
 height: unset !important;
 margin-top: 60px;
   }
-
+.midimghhh{
+  width: 100% !important;
+}
 
 .first-slide-box {
 width: 100%;
