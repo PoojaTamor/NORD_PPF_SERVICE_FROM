@@ -69,7 +69,7 @@
 
   <div class="input-row">
     <label>Phone Number:</label>
-    <input type="text" placeholder="+1 234 567 8901" name="phone"  required >
+    <input type="number" placeholder="23 4567 8901" name="phone"  required >
   </div>
 
   <div class="input-row">
@@ -174,7 +174,7 @@
 <div class="detailsbox">
 <div class="row gx-0 gy-4">
   <div class="col-12   ">
-  <h5> Warranty year</h5>
+  <h5> Warranty Year</h5>
 <div class="d-flex  justify-content-between align-items-center yearbox">
   <select required  id="warrantySelect" name="warranty">
  <option disabled selected>Select Warranty</option>
@@ -191,11 +191,11 @@
 <div class="d-flex  justify-content-between align-items-center">
     <div class="radio-row">
   <input type="radio" id="matte" name="finish" value="matte" required>
-    <label class="radio-label" for="matte">MATTE</label>
+    <label class="radio-label" for="matte">Matte</label>
   </div>
    <div class="radio-row">
                 <input type="radio" id="gloss" name="finish" value="gloss" required>
-    <label class="radio-label" for="gloss">GLOSS</label>
+    <label class="radio-label" for="gloss">Gloss</label>
    </div>
 </div>
     </div>
@@ -203,7 +203,7 @@
 
 
     <div class="col-12   ">
-  <h5> Cavarage area </h5>
+  <h5> Cavarage Area </h5>
 <div class="d-flex  justify-content-between align-items-center yearbox">
     <div class="radio-row">
   <input type="radio" id="full" name="cavarage" value="Full Cavarage" required>
@@ -211,10 +211,10 @@
   </div>
    <div class="radio-row">
                 <input type="radio" id="partial" name="cavarage" value="Partial" required>
-    <label class="radio-label" for="partial">Partial </label>
+    <label class="radio-label" for="partial"> Partial </label>
    </div>
 </div>
-                <input type="text" id="partial-parts" name="parts"  style="display: none;"  class="custom-input mt-3" placeholder="Enter the specific parts">
+  <input type="text" id="partial-parts" name="parts"  style="display: none;"  class="custom-input mt-3" placeholder="Enter the specific parts">
     </div>
     
 </div>
@@ -240,7 +240,7 @@
 
   <div class="input-row">
     <label>Phone Number:</label>
-    <input type="text" placeholder="3456789017" name="intaler_phone"  required >
+    <input type="number" placeholder="3456789017" name="intaler_phone"  required >
   </div>
 
   <div class="input-row">
@@ -310,12 +310,10 @@
     </div>
     </div>
 </div>
-
 </div>
     </div> 
   </div>
 </div>
-
   </div>
     </div> 
       <div class="col-12  mylastcolumn">
@@ -432,6 +430,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector('[data-box="submit-box"]')
   ];
 
+
+  
   const isMobile = window.innerWidth <= 768;
 
   // 🔒 Lock all steps initially
@@ -466,6 +466,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return input.value.trim() !== "";
     });
   }
+
 
   // ✅ Unlock first step on "Get Covered"
   if (getCoveredBtn) {
@@ -513,6 +514,7 @@ steps.forEach((step, index) => {
     });
   }
 });
+
 
 
   // ✅ Special handling for Service Step (unlock Installer only when all filled)
@@ -570,6 +572,20 @@ const requiredFields = form.querySelectorAll("input[required], select[required]"
       return;
     }
 
+    let instalphone =/^[0-9]{10}$/;
+        if (!instalphone.test(form.intaler_phone.value.trim())) {
+      Swal.fire("Invalid Phone", "Please enter a valid 10-digit installer  phone number under the installer details section .", "error");
+      form.intaler_phone.focus();
+      return;
+    }
+
+
+      const amount = form.querySelector("[name='amount']");
+  if (!amount.value.trim() || isNaN(amount.value)) {
+       Swal.fire("Amount Required", "Enter a valid amount paid.", );
+       return;
+  }
+
   let vehicleValue = form.ref_no.value.trim();
 let vehicleRegex = /^[A-Za-z0-9]+$/; // only letters and numbers
 
@@ -604,13 +620,40 @@ if (modelValue === "Other" && otherModelInput && otherModelInput.value.trim() !=
 
 
 
- const fileInput = document.querySelector("#fileInput");
-  let fileBase64 = null;
-  let fileName = "";
-  if(fileInput.files.length > 0){
-    fileBase64 = await readFileAsBase64(fileInput.files[0]);
-    fileName = fileInput.files[0].name;
-  }
+
+
+const fileInput = document.querySelector("#fileInput");
+const allowedTypes = ["image/jpeg", "image/jpg", "image/png"];
+const maxSize = 10 * 1024 // 1 MB for example
+
+if (fileInput.files.length === 0) {
+    Swal.fire("Car Image Required", "Please upload car image.");
+    return;
+      form.file.focus();
+
+} 
+
+const file = fileInput.files[0];
+
+if (!allowedTypes.includes(file.type)) {
+    Swal.fire("Required", "File must be JPG, JPEG, or PNG.");
+    return;
+      form.file.focus();
+
+}
+
+if (file.size > maxSize) {
+  Swal.fire("Required", "File must be smaller than 10KB.", );
+    return;
+      form.file.focus();
+
+}
+
+// If you want Base64 after validation
+let fileBase64 = await readFileAsBase64(file);
+let fileName = file.name;
+console.log(fileBase64, fileName);
+
 
  const warrantySelect = form.querySelector('select[required]');
     const finishRadio = form.querySelector('input[name="finish"]:checked');
@@ -631,19 +674,19 @@ if (modelValue === "Other" && otherModelInput && otherModelInput.value.trim() !=
       ref_no: form.ref_no.value,
       year: form.year.value,
       Color: form.Color.value,
- warranty_type: warranty_type,
+      warranty_type: warranty_type,
       services: services,
       coverage_area: coverage_area,
       parts: parts,
-    intallername: form.intallername.value,
-  intaler_phone: form.intaler_phone.value,
-  instaler_email: form.instaler_email.value,
-  serviceDate: form.dateInput.value,
-  storeLocation: form.storeLocation.value,
-  dateInput: form.dateInput.value,
-    amount: form.amount.value,
-    fileBase64,
-    fileName
+      intallername: form.intallername.value,
+      intaler_phone: form.intaler_phone.value,
+      instaler_email: form.instaler_email.value,
+      serviceDate: form.dateInput.value,
+      storeLocation: form.storeLocation.value,
+      dateInput: form.dateInput.value,
+      amount: form.amount.value,
+      fileBase64,
+      fileName
     };
 
     try{
@@ -668,6 +711,9 @@ if (modelValue === "Other" && otherModelInput && otherModelInput.value.trim() !=
   });
 
 });
+
+
+
 //   // ✅ Form Submit Validation + Logic
 //   submitBtn.addEventListener("click", async function (e) {
 //     e.preventDefault();
@@ -767,12 +813,8 @@ if (modelValue === "Other" && otherModelInput && otherModelInput.value.trim() !=
 //     });
 //   }
 // });
-</script> 
 
-
-
-
-
+</script>
 
 <script>
     const modelData = {
@@ -864,7 +906,7 @@ modelSelect.addEventListener("change", function () {
     otherModelInput.required = false;
   }
 });
-
 </script>
   </body>
 </html>
+
