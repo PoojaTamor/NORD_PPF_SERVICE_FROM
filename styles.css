@@ -849,6 +849,10 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+div:where(.swal2-icon).swal2-info {
+    border-color: #EB4A14;
+    color: #EB4A14;
+}
 @media (max-width: 991.98px) {
   .logo-box{
     height: unset !important;
@@ -1185,4 +1189,3 @@ width:90% !important;
 /* margin-block: 100px !important; */
 }
 }
-
