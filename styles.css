@@ -838,6 +838,8 @@ div:where(.swal2-icon).swal2-error {
 div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line] {
     background-color: #EB4A14 !important;
 }
+
+
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -1097,6 +1099,7 @@ padding: 4px 10px;
     /* border: 1px solid #faf4f4 !important; */
 }
 
+
 h5 {
     font-size: 1rem;
 }
@@ -1124,6 +1127,8 @@ padding-bottom: 50px;
 .Uplode_box .nextbtn{
   width: 10%;
 }
+
+
 
 .upload-btn {
 border: 1px solid #ccc;
@@ -1188,4 +1193,7 @@ margin-top: 60px;
 width:90% !important;
 /* margin-block: 100px !important; */
 }
+
+
+
 }
