@@ -517,6 +517,8 @@ steps.forEach((step, index) => {
 
 
 
+
+
   // ✅ Special handling for Service Step (unlock Installer only when all filled)
 // ✅ Service Step unlocking now only via Next Button click
 const serviceStep = document.querySelector('[data-box="services"]');
@@ -553,6 +555,7 @@ if (serviceStep && installerStep) {
   // ✅ Form Submit
   submitBtn.addEventListener("click", async function(e){
     e.preventDefault();
+
 
 const requiredFields = form.querySelectorAll("input[required], select[required]");
     for(let field of requiredFields){
@@ -653,7 +656,8 @@ if (file.size > maxSize) {
 let fileBase64 = await readFileAsBase64(file);
 let fileName = file.name;
 console.log(fileBase64, fileName);
-
+submitBtn.disabled = true;
+  submitBtn.innerText = "Submitting..."; // optional feedback
 
  const warrantySelect = form.querySelector('select[required]');
     const finishRadio = form.querySelector('input[name="finish"]:checked');
@@ -697,6 +701,8 @@ console.log(fileBase64, fileName);
         body: JSON.stringify(formData)
       });
  form.reset();
+  submitBtn.disabled = false;
+    submitBtn.innerText = "Submit";
       // Animation
       const firstColumn = document.querySelector(".firstallinone");
       const lastColumn = document.querySelector(".mylastcolumn");
@@ -909,4 +915,6 @@ modelSelect.addEventListener("change", function () {
 </script>
   </body>
 </html>
+
+
 
