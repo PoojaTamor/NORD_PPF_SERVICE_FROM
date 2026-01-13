@@ -615,7 +615,7 @@ if (modelValue === "Other" && otherModelInput && otherModelInput.value.trim() !=
 
 const fileInput = document.querySelector("#fileInput");
 const allowedTypes = ["image/jpeg", "image/jpg", "image/png"];
-const maxSize = 10 * 1024 // 1 MB for example
+const maxSize = 5 * 1024 * 1024; // 5 MB
 
 if (fileInput.files.length === 0) {
     Swal.fire("Car Image Required", "Please upload car image.");
@@ -634,7 +634,7 @@ if (!allowedTypes.includes(file.type)) {
 }
 
 if (file.size > maxSize) {
-  Swal.fire("Required", "File must be smaller than 10KB.", );
+  Swal.fire("Required", "File must be smaller than 5MB.", );
     return;
       form.file.focus();
 
@@ -916,3 +916,4 @@ modelSelect.addEventListener("change", function () {
 
 
 </html>
+
